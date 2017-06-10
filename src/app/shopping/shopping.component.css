@@ -1,0 +1,28 @@
+.example-card {
+  max-width: 300px;
+  margin: 10px;
+  display: inline-block;
+}
+
+.card-actions {
+  text-align: center;
+}
+
+.price {
+  font-style: italic;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.description {
+  font-style: italic;
+  font-size: 10px;
+}
+
+.name {
+  font-size: 15px;
+}
+
+.example-header-image {
+  background-size: cover;
+}
