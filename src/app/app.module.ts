@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 
 // Angular Material Libraries
-import { MdToolbarModule, MdCardModule, MdButtonModule, MdGridListModule, MdChipsModule } from '@angular/material';
+import { MdToolbarModule, MdCardModule, MdButtonModule, MdGridListModule, MdChipsModule, MdListModule } from '@angular/material';
 // App Components
 import { AppComponent } from './app.component';
 import { ShoppingComponent } from './shopping/shopping.component';
@@ -37,6 +37,7 @@ import { app_RouterModule } from './router/router.module';
     MdButtonModule,
     MdGridListModule,
     MdChipsModule,
+    MdListModule,
     app_RouterModule
   ],
   providers: [ProductService, ShoppingCartService],

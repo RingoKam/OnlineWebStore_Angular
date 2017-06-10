@@ -1,13 +1,11 @@
 <md-toolbar color="primary">
   <button class="app-icon-button">
-      <span class="app-toolbar-menu">Ringo Gallery</span>
+      <span routerLink="/shopping" class="app-toolbar-menu">Ringo Gallery</span>
   </button>
   <span class="app-toolbar-filler"></span>
   <button class="app-icon-button">
       <span routerLink="/checkout" class="app-toolbar-menu">Shopping Cart {{cart?.length}}</span>
   </button>
 </md-toolbar>
-<div>
-  {{cart | json}}
-</div>
+
 <router-outlet></router-outlet>

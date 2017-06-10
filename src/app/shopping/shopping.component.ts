@@ -1,5 +1,5 @@
 import { ShoppingCartService } from './../Services/shopping-cart.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { ProductService } from '../Services/product.service';
 import { ProductModel } from '../Interfaces/ProductModel';
 
@@ -9,7 +9,6 @@ import { ProductModel } from '../Interfaces/ProductModel';
   styleUrls: ['./shopping.component.css']
 })
 export class ShoppingComponent implements OnInit {
-
   public ProductList: Array<ProductModel>;
 
   constructor(private productService: ProductService, private shoppingCartService: ShoppingCartService) { }
@@ -18,6 +17,7 @@ export class ShoppingComponent implements OnInit {
     this.ProductList = this.productService.getAllProducts();
   }
 
+  @Output()
   AddToCart(product: ProductModel) {
     this.shoppingCartService.AddToCart(product);
   }

@@ -9,7 +9,7 @@ export class ShoppingCartService implements OnInit {
   private AddShoppingCartUrl: string;
   private CheckoutShoppingCartUrl: string;
 
-  public cart: Array<ShoppinngCartModel>;
+  public cart: Array<ProductModel>;
 
   constructor() { }
 
@@ -20,17 +20,11 @@ export class ShoppingCartService implements OnInit {
   }
 
   AddToCart(product: ProductModel) {
-    if (!this.cart) {
-      this.cart = [{Product: product, Qty: 1}];
+    if (this.cart) {
+      this.cart = [...this.cart, product];
     } else {
-      this.cart = this.cart.map((cartitem) => {
-        if (product.id = cartitem.Product.id) {
-          cartitem.Qty += 1;
-        }
-        return cartitem;
-      });
+      this.cart = [product];
     }
-    console.log("Cart is now ", this.cart)
   }
 
   CheckoutCart() {
